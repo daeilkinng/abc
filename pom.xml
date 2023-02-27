@@ -104,10 +104,16 @@
             <type>pom</type>
         </dependency>-->
 
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-log4j12</artifactId>-->
+<!--            <version>1.6.6</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.6.6</version>
+            <version>1.7.32</version>
             <scope>provided</scope>
         </dependency>
         <!--<dependency>
@@ -166,13 +172,13 @@
             <systemPath>C:\Users\Dmove\.m2\repository\com\softcamp\1.0.1\softcamp-1.0.1.jar</systemPath>
         </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>com.softcamp</groupId>-->
-<!--            <artifactId>softcamp</artifactId>-->
-<!--            <version>4.0</version>-->
-<!--            <scope>system</scope>-->
-<!--            <systemPath>C:\DEV\workspace\confl-drm\lib\scsl.jar</systemPath>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.softcamp</groupId>
+            <artifactId>softcamp</artifactId>
+            <version>4.0</version>
+            <scope>system</scope>
+            <systemPath>C:\DEV\workspace\confl-drm\lib\scsl.jar</systemPath>
+        </dependency>
 
         <!-- Google Collections, useful utilities for manipulating collections -->
         <dependency>
