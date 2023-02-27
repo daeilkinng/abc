@@ -18,7 +18,7 @@
     <description>This is the kr.dmove.woori-confl-drm:confl-drm plugin for Atlassian</description>
     <packaging>atlassian-plugin</packaging> <!-- 프로젝트를 어떤 형태로 패키징할지 결정한다. jav, war, ear, pom 등이 해당된다.-->
 
-    <properties>11
+    <properties>
         <confluence.version>7.19.0</confluence.version>
         <confluence.data.version>7.19.0</confluence.data.version>
         <amps.version>8.0.2</amps.version>
