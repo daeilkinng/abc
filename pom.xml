@@ -33,8 +33,7 @@
         <upm.version>5.1.4</upm.version>
     </properties>
 
-    <!-- 인텔리제이에서 사용하기 위한 추가 -->
-    <!-- 이클립스환경에서는 주석 처리 -->
+    <!-- 인텔리제이에서 사용하기 위한 설정 -->
     <repositories>
         <repository>
             <id>Atlassian</id>
