@@ -165,7 +165,7 @@
             <artifactId>softcamp</artifactId>
             <version>4.0</version>
             <scope>system</scope>
-            <systemPath>C:\DEV\workspace\confl-drm\lib\scsl.jar</systemPath>11
+            <systemPath>C:\DEV\workspace\confl-drm\lib\scsl.jar</systemPath>
         </dependency>
 
         <!-- Google Collections, useful utilities for manipulating collections -->
