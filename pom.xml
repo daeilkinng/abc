@@ -103,12 +103,12 @@
             <type>pom</type>
         </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>org.slf4j</groupId>-->
-<!--            <artifactId>slf4j-log4j12</artifactId>-->
-<!--            <version>1.6.6</version>-->
-<!--            <scope>provided</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.slf4j</groupId>-->
+        <!--            <artifactId>slf4j-log4j12</artifactId>-->
+        <!--            <version>1.6.6</version>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
@@ -206,7 +206,7 @@
                     <productVersion>${confluence.version}</productVersion>
                     <productDataVersion>${confluence.data.version}</productDataVersion>
                     <enableQuickReload>true</enableQuickReload>
-<!--                    <enableFastdev>false</enableFastdev>-->
+                    <!--                    <enableFastdev>false</enableFastdev>-->
                     <!-- See here for an explanation of default instructions: -->
                     <!-- https://developer.atlassian.com/server/framework/atlassian-sdk/configuration-of-instructions-in-atlassian-plugins/#default-plugin-instructions -->
                     <instructions>
