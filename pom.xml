@@ -160,13 +160,13 @@
             <systemPath>C:\Users\Dmove\.m2\repository\com\softcamp\1.0.1\softcamp-1.0.1.jar</systemPath>
         </dependency>-->
 
-        <!--<dependency>
+        <dependency>
             <groupId>com.softcamp</groupId>
             <artifactId>softcamp</artifactId>
             <version>4.0</version>
             <scope>system</scope>
             <systemPath>C:\DEV\workspace\confl-drm\lib\scsl.jar</systemPath>
-        </dependency>-->
+        </dependency>
 
         <!-- Google Collections, useful utilities for manipulating collections -->
         <dependency>
