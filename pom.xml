@@ -14,7 +14,7 @@
         <url>http://www.dmove.kr</url>
     </organization>
 
-    <name>confl-drm</name>asadfsdaf
+    <name>confl-drm</name>
     <description>This is the kr.dmove.woori-confl-drm:confl-drm plugin for Atlassian</description>
     <packaging>atlassian-plugin</packaging> <!-- 프로젝트를 어떤 형태로 패키징할지 결정한다. jav, war, ear, pom 등이 해당된다.-->
 
