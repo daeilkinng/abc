@@ -1,0 +1,83 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+        <param name="configure.url">/plugin/servlet/confldrm/admin/config</param>
+    </plugin-info>
+
+    <!--<servlet name="confluence drm Servlet" key="confldrm-servlet" class="kr.dmove.woori.drm.action.ConflDrmServlet">
+       <description key="confldrm-servlet.description">Servlet for the unlicensed product</description>
+       <url-pattern>/confldrm/admin/config</url-pattern>
+   </servlet>-->
+
+    <!--<servlet name="confluence drm prohibit Servlet" key="confldrm-prohibit-servlet" class="kr.dmove.woori.drm.action.ConflDrmServlet">
+        <description key="confldrm-prohibit-servlet.description">Servlet for the prohibit extension</description>
+        <url-pattern>/confldrm/admin/prohibit</url-pattern>
+    </servlet>-->
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="confl-drm"/>
+
+    <!-- add our web resources -->
+    <web-resource key="confl-drm-resources" name="confl-drm Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+
+        <resource type="download" name="confl-drm.css" location="/css/confl-drm.css"/>
+        <resource type="download" name="confl-drm.js" location="/js/confl-drm.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>confl-drm</context>
+    </web-resource>
+
+    <!-- new ui section -->
+    <web-section key="drmadmin_section" name="DRM Admin Section" location="system.admin"
+                 i18n-name-key="confldrm.admin.web.label" weight="150" >
+        <label key="confldrm.admin.web.label" />
+    </web-section>
+
+    <rest key="rest" path="/drmsetting" version="1.0">
+        <description>Provides REST resources for the admin UI.</description>
+    </rest>
+
+    <!-- Item in Space Tools -->
+    <!--<web-item key="space-admin-quick-link-manager" name="Quick Link Manager in Space Admin" section="space-tools" weight="100">
+        <label key="space.admin.quick.link.manager" />
+        <link linkId="space-admin-quick-link-manager-id">/plugins/servlet/confldrm/admin/config</link>
+        <condition class="com.atlassian.confluence.plugin.descriptor.web.conditions.SpaceAdminCondition"/>
+    </web-item>-->
+
+    <!-- Item in Space Admin (for Doc Theme) -->
+    <!--<web-item key="space-admin-quick-link-manager-2" name="Quick Link Manager in Space Admin" section="space-tools" weight="100">
+        <label key="space.admin.quick.link.manager" />
+        <link linkId="space-admin-quick-link-manager-id">/plugins/servlet/confldrm/admin/config</link>
+        <condition class="com.atlassian.confluence.plugin.descriptor.web.conditions.SpaceAdminCondition" invert="true" />
+    </web-item>-->
+
+    <web-item key="drm-for-confl-admin"
+              name="confl-drmadmin" i18n-name-key="confldrm.admin.label" section="system.admin/configuration" weigh="100">
+        <label key="confldrm.admin.label" />
+        <link linkId="drm-for-confl-admin">/plugins/servlet/confldrm/admin/config</link>
+    </web-item>
+
+    <servlet-filter name="fileFilterForDRM" key="fileFilterForDRM" class="kr.dmove.woori.drm.filters.FileFilterForDRM"
+                    location="before-dispatch" weight="100">
+        <!--location="before-decoration" weight="100">-->
+        <!--<url-pattern>/*</url-pattern>-->
+
+        <!-- TODO : confirm : upload 전체 -->
+        <url-pattern>/pages/attachfile.action</url-pattern>
+        <url-pattern>/pages/doattachfile.action*</url-pattern>
+        <url-pattern>/plugins/drag-and-drop/upload.action</url-pattern>
+        <url-pattern>/pages/plugins/attachments/doattachfile.action*</url-pattern>
+        <url-pattern>/pages/doeditscaffold.action</url-pattern>
+        <!-- TODO : confirm : download 전체 -->
+        <url-pattern>/pages/downloadallattachments.action</url-pattern>
+        <url-pattern>/download/attachments*</url-pattern>
+
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </servlet-filter>
+</atlassian-plugin>

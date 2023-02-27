@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>$i18n.getText("confldrm.admin.label")</title>
+        <meta name="decorator" content="atl.admin">
+        $webResourceManager.requireResourcesForContext("confl-drm")
+    </head>
+    <body>
+        <h1>
+            <span id="upm-title" style="font-size: 1.8em; line-height: 1.8em;">DRM Configuration(Softcamp)</span>
+        </h1>
+        <br/>
+        <form id="admin" class="aui">
+            <h2>
+                <span id="upm-title" style="font-size: 1.8em; line-height: 1.8em;">$i18n.getText("confldrm.admin.enable.label")</span>
+            </h2>
+            <div class="field-group">
+                <label for="allowExtension">$i18n.getText("confldrm.admin.allow_extension.label")</label>
+                <input type="text" id="allowExtension" name="allowExtension" class="text long-field" value="" />
+            </div>
+
+            <h2>
+                <span id="upm-title" style="font-size: 1.8em; line-height: 1.8em;">$i18n.getText("confldrm.admin.prohibit.label")</span>
+            </h2>
+            <div class="field-group">
+                <label for="prohibitExtension">$i18n.getText("confldrm.admin.prohibit_extension.label")</label>
+                <input type="text" id="prohibitExtension" name="prohibitExtension" class="text long-field" value="" />
+            </div>
+
+            <h2>
+                <span id="upm-title" style="font-size: 1.8em; line-height: 1.8em;">$i18n.getText("confldrm.admin.dac.label")</span>
+            </h2>
+            <div class="field-group">
+                <label for="keyFile">$i18n.getText("confldrm.admin.keyfile.label")</label>
+                <input type="text" id="keyFile" name="keyFile" class="text long-field" value="" />
+            </div>
+            <div class="field-group">
+                <label for="userId">$i18n.getText("confldrm.admin.userId.label")</label>
+                <input type="text" id="userId" name="userId" class="text long-field" value="" />
+            </div>
+            <div class="field-group">
+                <label for="auth">$i18n.getText("confldrm.admin.auth.label")</label>
+                <input type="text" id="auth" name="auth" class="text long-field" value="" />
+            </div>
+
+            <br/>
+            <div class="field-group">
+                <input type="submit" id="btnApply" value="$i18n.getText("confldrm.admin.apply.label")" class="button" />
+            </div>
+        </form>
+    </body>
+</html>

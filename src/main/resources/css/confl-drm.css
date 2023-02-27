@@ -1,0 +1,537 @@
+form.drm {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+form.drm:first-child {
+    margin-top: 0;
+}
+/* field styles */
+form.drm .text,
+form.drm .password,
+form.drm .upfile,
+form.drm .textarea,
+form.drm .select,
+form.drm .multi-select,
+form.drm .aui-select2-container {
+    background: #ffffff;
+    color: #344563;
+    font-family: inherit;
+    font-size: 14px;
+}
+form.drm .text,
+form.drm .password,
+form.drm .textarea,
+form.drm .select,
+form.drm .multi-select,
+form.drm .aui-select2-container .select2-choices {
+    border: 1px solid #c1c7d0;
+    border-radius: 3.01px;
+    box-sizing: border-box;
+    font-size: inherit;
+    margin: 0;
+    max-width: 250px;
+    vertical-align: baseline;
+    width: 100%;
+}
+form.drm .text,
+form.drm .password,
+form.drm .select,
+form.drm .aui-select2-container .select2-choices {
+    height: 2.14285714em;
+    line-height: 1.4285714285714;
+    padding: 4px 5px;
+}
+form.drm .select {
+    padding: 6px 5px 5px 5px;
+    /* Firefox doesn't allow line-height to be adjusted and selects bradk horribly when the foot-family */
+    vertical-align: top;
+}
+form.drm .textarea,
+form.drm .select[size],
+form.drm .multi-select {
+    height: auto;
+    line-height: 1.4285714285714;
+    margin: 0;
+    padding: 4px 5px;
+}
+form.drm .textarea {
+    overflow-y: auto;
+}
+/*  Ensure AUI Select2's do not show as regular text fields */
+form.drm .aui-select2-container {
+    border: 0;
+    height: auto;
+    max-width: 250px;
+    padding: 0;
+    vertical-align: baseline;
+    width: 100%;
+}
+form.drm .aui-select2-container .select2-choices {
+    height: auto;
+    max-width: none;
+}
+/* Do not give file inputs a height or width because they break horribly in certain browsers */
+form.drm .upfile {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 5px 0;
+    padding: 0;
+}
+form.drm optgroup {
+    background-color: #f4f5f7;
+    color: #6b778c;
+    font-style: normal;
+    font-weight: normal;
+}
+form.drm option,
+form.drm optgroup option {
+    background-color: #ffffff;
+    color: #172b4d;
+}
+/* Disabled form element styles */
+form.drm .text[disabled],
+form.drm .password[disabled],
+form.drm .textarea[disabled],
+form.drm .select[disabled],
+form.drm .multi-select[disabled],
+form.drm .select[disabled] option,
+form.drm .select[disabled] optgroup,
+form.drm .multi-select[disabled] option,
+form.drm .multi-select[disabled] optgroup {
+    background-color: #f4f5f7;
+    color: #97a0af;
+}
+form.drm .text[disabled],
+form.drm .password[disabled],
+form.drm .textarea[disabled],
+form.drm .select[disabled],
+form.drm .multi-select[disabled] {
+    border-color: #97a0af;
+}
+form.drm .text[disabled],
+form.drm .password[disabled],
+form.drm .textarea[disabled],
+form.drm .select[disabled],
+form.drm .multi-select[disabled],
+form.drm .radio[disabled],
+form.drm .checkbox[disabled] {
+    cursor: not-allowed;
+}
+form.drm .text::-webkit-input-placeholder,
+form.drm .password::-webkit-input-placeholder,
+form.drm .textarea::-webkit-input-placeholder {
+    color: #97a0af;
+    opacity: 1;
+}
+form.drm .text::-moz-placeholder,
+form.drm .password::-moz-placeholder,
+form.drm .textarea::-moz-placeholder {
+    color: #97a0af;
+    opacity: 1;
+}
+form.drm .text:-ms-input-placeholder,
+form.drm .password:-ms-input-placeholder,
+form.drm .textarea:-ms-input-placeholder {
+    color: #97a0af;
+}
+form.drm .text::placeholder,
+form.drm .password::placeholder,
+form.drm .textarea::placeholder {
+    color: #97a0af;
+}
+form.drm .text.aui-placeholder-shown,
+form.drm .password.aui-placeholder-shown,
+form.drm .textarea.aui-placeholder-shown,
+form.drm .text.placeholder-show,
+form.drm .password.placeholder-show,
+form.drm .textarea.placeholder-show {
+    color: #97a0af;
+}
+form.drm .text[type=search] {
+    -webkit-appearance: textfield;
+    outline-width: 5px;
+    outline-offset: -2px;
+}
+form.drm .text[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+/* Field widths
+ * - don't add widths to file inputs - they break horribly
+ */
+form.drm .short-field {
+    max-width: 75px;
+}
+form.drm .medium-field {
+    max-width: 165px;
+}
+form.drm .medium-long-field {
+    max-width: 350px;
+}
+form.drm .long-field {
+    max-width: 500px;
+}
+form.drm .full-width-field {
+    max-width: none;
+}
+/* Structural elements */
+form.drm fieldset {
+    border: 0;
+    clear: both;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+form.drm legend,
+form.drm label {
+    color: #6b778c;
+}
+form.drm .icon-required {
+    left: 100%;
+    position: absolute;
+    top: 5px;
+}
+form.drm .icon-required {
+    content: "*";
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: initial;
+    color: #de350b;
+    line-height: 1;
+    font-size: 12px;
+}
+form.drm div.description {
+    color: #6b778c;
+    font-size: 12px;
+    line-height: 1.66666666666667;
+    margin: 5px 0 0 0;
+}
+form.drm div.description:first-child {
+    margin-top: 0;
+}
+form.drm .field-value {
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 5px;
+}
+/* TODO: don't support this in AUI Forms 2 */
+form.drm legend {
+    display: none;
+}
+form.drm .field-group,
+form.drm .group,
+form.drm .date-select {
+    box-sizing: border-box;
+    clear: both;
+    padding: 4px 0 4px 145px;
+    position: relative;
+    margin: 1px 0;
+    width: 100%;
+}
+form.drm .group {
+    padding-top: 0;
+}
+form.drm .field-group:before,
+form.drm .field-group:after,
+form.drm .group:before,
+form.drm .group:after,
+form.drm .date-select:before,
+form.drm .date-select:after {
+    content: " ";
+    display: table;
+}
+form.drm .field-group:after,
+form.drm .group:after,
+form.drm .date-select:after {
+    clear: both;
+}
+form.drm legend,
+form.drm .field-group > label,
+form.drm .field-group > aui-label {
+    float: left;
+    margin-left: -145px;
+    padding: 5px 0 0 0;
+    position: relative;
+    text-align: right;
+    width: 130px;
+    word-wrap: break-word;
+}
+form.drm .checkbox > label,
+form.drm .radio > label {
+    color: #172b4d;
+}
+form.drm div.checkbox > .checkbox[disabled] + label,
+form.drm div.radio > .radio[disabled] + label {
+    color: #97a0af;
+    cursor: not-allowed;
+}
+form.drm .field-group .error,
+form.drm .group .error,
+form.drm .checkbox .error,
+form.drm .radio .error {
+    clear: both;
+    color: #de350b;
+    display: block;
+    margin: 5px 0 0 0;
+}
+form.drm .field-group .error:first-child,
+form.drm .checkbox .error:first-child,
+form.drm .radio .error:first-child {
+    margin-top: 0;
+}
+form.drm .group legend,
+form.drm .date-select legend {
+    clear: none;
+}
+form.drm .group .field-group,
+form.drm .date-select .field-group {
+    clear: none;
+    padding-left: 0;
+    padding-top: 0;
+}
+form.drm .date-select .field-group label {
+    display: none;
+}
+form.drm div.checkbox,
+form.drm div.radio {
+    margin: 5px 0 0 0;
+    padding: 0 0 0 20px;
+    position: relative;
+}
+form.drm legend + .field-group,
+form.drm legend + .checkbox,
+form.drm legend + .radio {
+    margin-top: 0;
+    padding-top: 5px;
+}
+form.drm div.checkbox:first-child,
+form.drm div.radio:first-child {
+    margin-top: 0;
+}
+form.drm .matrix {
+    padding-top: 5px;
+}
+form.drm div.radio input.radio,
+form.drm div.checkbox input.checkbox {
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 1.4285714285714em;
+    left: 0;
+    margin: 0;
+    padding: 2px;
+    position: absolute;
+    vertical-align: baseline;
+}
+/* Buttons */
+form.drm .buttons-container {
+    box-sizing: border-box;
+    clear: both;
+    margin: 1px 0 0 0;
+    padding: 4px 0 4px 145px;
+    position: relative;
+    width: 100%;
+}
+/* Long Labels
+ * add long-label class to form eg: <form class="aui long-label">
+ */
+form.drm.long-label .field-group,
+form.drm.long-label .group,
+form.drm.long-label .date-select,
+form.drm.long-label .buttons-container {
+    padding-left: 250px;
+}
+form.drm.long-label .field-group > label,
+form.drm.long-label .field-group > aui-label,
+form.drm.long-label .group > legend {
+    margin-left: -250px;
+    width: 235px;
+}
+form.drm.long-label .group .field-group,
+form.drm.long-label .date-select .field-group {
+    padding-left: 0;
+}
+/* End Long Labels */
+/* Top Labels
+ * add top-label class to form eg: <form class="aui top-label">
+ * display all forms width top-labels for screen sizes < 768px
+ */
+form.drm.top-label .field-group {
+    padding-left: 0;
+}
+form.drm.top-label .field-group > label,
+form.drm.top-label .field-group > aui-label {
+    display: block;
+    float: none;
+    margin: 0 0 5px 0;
+    padding: 0;
+    text-align: left;
+    width: auto;
+}
+form.drm.top-label .icon-required {
+    left: 0;
+    position: relative;
+    top: 0;
+}
+form.drm.top-label .group,
+form.drm.top-label .date-select {
+    padding-left: 0;
+}
+form.drm.top-label .group legend,
+form.drm.top-label .date-select legend {
+    float: none;
+    margin: 0;
+    text-align: left;
+    width: auto;
+}
+form.drm.top-label .date-select label {
+    display: none;
+}
+form.drm.top-label .buttons-container {
+    padding-left: 0;
+}
+/* End Top Labels */
+/* Deprecated button styling - use the new aui-button component */
+/* Basic button style */
+form.drm .button {
+    box-sizing: border-box;
+    transition: background-color 0.1s ease-out;
+    border-radius: 3.01px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-variant: normal;
+    font-weight: 400;
+    background-image: none;
+    background-color: rgba(9, 30, 66, 0.08);
+    border-color: transparent;
+    color: #344563;
+    height: 2.14285714em;
+    line-height: 1.4285714285714;
+    margin: 0;
+    padding: 4px 10px;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+form.drm .button:focus,
+form.drm .button:hover {
+    background-color: rgba(9, 30, 66, 0.13);
+    border-color: transparent;
+    color: #344563;
+    text-decoration: none;
+}
+form.drm .button:active,
+form.drm .button.active {
+    background-image: none;
+    background-color: #deebff;
+    border-color: transparent;
+    color: #0052cc;
+    text-decoration: none;
+}
+form.drm .button[disabled],
+form.drm .button[disabled]:hover,
+form.drm .button[disabled]:focus,
+form.drm .button[disabled]:active {
+    background-color: #f4f5f7;
+    border-color: transparent;
+    color: #a5adba;
+    cursor: default;
+}
+form.drm .cancel {
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    padding: 5px 10px;
+    vertical-align: baseline;
+}
+/* Create 10px effective gap; backwards compat for old and new buttons */
+/* zero font size hack to stop 4px magic number problems. */
+form.drm .buttons-container > .buttons {
+    font-size: 0;
+}
+/* ensure zero font size hack doesn't kill other elements */
+form.drm .buttons-container > .buttons > * {
+    font-size: 14px;
+}
+form.drm .buttons-container .button + .button,
+form.drm .buttons-container .button + .aui-button,
+form.drm .buttons-container .aui-button + .button,
+form.drm .buttons-container .aui-button + .aui-button {
+    margin-left: 10px;
+}
+form.drm .buttons-container .aui-button + .aui-button-link {
+    margin-left: 9px;
+    /* 1px diff due to border */
+}
+/* Message Interops */
+form.drm .aui-message + .field-group,
+form.drm .aui-message + .group,
+form.drm .aui-message + .date-select {
+    margin-top: 10px;
+}
+/* Deprecated */
+form.drm span.content {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+form.drm pre.aui-form {
+    background-color: #f4f5f7;
+    border: 1px solid #dfe1e6;
+    font-family: "SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.66666667;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 15px;
+}
+@media screen and (max-width: 767px) {
+    html.aui-responsive form.drm .field-group,
+    html.aui-responsive form.drm.long-label .field-group {
+        padding-left: 0;
+    }
+    html.aui-responsive form.drm .field-group > label,
+    html.aui-responsive form.drm.long-label .field-group > label,
+    html.aui-responsive form.drm .field-group > aui-label,
+    html.aui-responsive form.drm.long-label .field-group > aui-label {
+        display: block;
+        float: none;
+        margin: 0 0 5px 0;
+        padding: 0;
+        text-align: left;
+        width: auto;
+    }
+    html.aui-responsive form.drm .icon-required,
+    html.aui-responsive form.drm.long-label .icon-required {
+        left: 0;
+        position: relative;
+        top: 0;
+    }
+    html.aui-responsive form.drm .group,
+    html.aui-responsive form.drm.long-label .group,
+    html.aui-responsive form.drm .date-select,
+    html.aui-responsive form.drm.long-label .date-select {
+        padding-left: 0;
+    }
+    html.aui-responsive form.drm .group legend,
+    html.aui-responsive form.drm.long-label .group legend,
+    html.aui-responsive form.drm .date-select legend,
+    html.aui-responsive form.drm.long-label .date-select legend {
+        float: none;
+        margin: 0;
+        text-align: left;
+        width: auto;
+    }
+    html.aui-responsive form.drm .date-select label,
+    html.aui-responsive form.drm.long-label .date-select label {
+        display: none;
+    }
+    html.aui-responsive form.drm .buttons-container,
+    html.aui-responsive form.drm.long-label .buttons-container {
+        padding-left: 0;
+    }
+}
